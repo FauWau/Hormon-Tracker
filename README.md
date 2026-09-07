@@ -15,7 +15,7 @@ Da ich länger hier dran gearbeitet habe und das während meines Studiums mache,
 Im folgenden werden die zur Nutzung notwendigen Installationsschritte beschrieben. 
 
 1. Projekt Herunterladen <br>
-Das Projekt wird auf GitHub auf der Seite `https://github.com/FauWau/Hormon-Tracker/tree/master` verwaltet. Um es herunterzuladen nutzt man die Schaltfläche `Code` und kllickt unten auf `Download ZIP`. Wenn der ZIP-Ordner heruntergeladen ist, muss man den Inhalt in einen leeren Ordner entpacken.  
+Das Projekt wird auf GitHub auf der Seite `https://github.com/FauWau/Hormon-Tracker/tree/master` verwaltet. Um es herunterzuladen nutzt man die Schaltfläche `Code` und klickt unten auf `Download ZIP`. Wenn der ZIP-Ordner heruntergeladen ist, muss man den Inhalt in einen leeren Ordner entpacken.  
 
 2. Installieren von NodeJS und NodePackageManager <br>
 Für alle gängigen Betriebssysteme findet sich auf der Seite `https://nodejs.org/en/download` der entsprechende Installer für NodeJS. Dieser muss entsprechend des eigenen Systemes ausgewählt, heruntergeladen und ausgeführt werden. NPM ist im Download inbegriffen.
