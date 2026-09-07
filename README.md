@@ -6,7 +6,7 @@ Um den Nutzer zu informieren gibt eine über den Browser zugreifbare GUI und die
 Getestet und entwickelt wurde unter Linux auf einem Raspberry Pi Zero W 1.1 mit der Node Version 24.20.0
 
 Da ich länger hier dran gearbeitet habe und das während meines Studiums mache, wäre ich sehr dankbar, falls alle, die in der Lage sind, eine kleine Spende über Buy Me A Coffee da lassen würden:
-buymeacoffee.com/fauwau
+<a href="buymeacoffee.com/fauwau">buymeacoffee.com/fauwau</a>
 
 
 
