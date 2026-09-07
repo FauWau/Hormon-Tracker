@@ -7,6 +7,11 @@
  * Letztes Update: 07.09.2026
 */
 
+// Wartezeit zwischen Prüfungen in ms
+// Sollte wegen möglicher IP-Sperre der Seite nict zu niedrig gesetzt werden
+export const waitTime = 1800000 //1800000 ms = 30 min
+
+
 // Server Einstellungen
 export const port = 8080
 

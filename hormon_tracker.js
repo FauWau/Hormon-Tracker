@@ -202,7 +202,7 @@ try {
 
 		server.listen(config.port)
 		// Warte eine halbe Stunde
-		await new Promise(resolve => setTimeout(resolve, 1800000))
+		await new Promise(resolve => setTimeout(resolve, config.waitTime))
 		server.close()
 		console.log("\n")
 	}
