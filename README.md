@@ -32,11 +32,14 @@ Um die Nutzung im Hintergrund zu ermöglichen verwendet dieses Projekt TMux. Die
 1. Terminal öffnen und Verzeichnis wechseln <br>
 Das Terminal-Öffnen erfolgt genau so wie zuvor beschrieben, ebenso wie der Wechsel in den korrekten Ordner.
 
-2. Aktivieren von TMux <br>
+2. Bestimmen der Geräte IP<br>
+Die IP-Adresse ist nötig, um auf die grafische Nutzeroberfläche zuzugreifen. Man muss den Befehl `ifconfig` eingeben und beim Ergebnis eine Zahlenfolge nach dem Schema `AAA.BBB.CCC.DDD` suchen und für später kopieren. Anfangen sollte die Zahl mit `192` und nicht `255`.
+
+4. Aktivieren von TMux <br>
 Dafür muss nur der Befehl `tmux` eingegeben und bestätigt werden. Am unteren Bildschirmrand sollte nun ein grüner Rand sein.
 
-3. Tracker starten <br>
-Zum Starten benötigt man den Befehl `node hormon_tracker.js`. In der Konsole sollten nun Statusinformationen erscheinen.
+5. Tracker starten <br>
+Zum Starten benötigt man den Befehl `node hormon_tracker.js`. In der Konsole sollten nun Statusinformationen erscheinen. Die Emails werden bei Verfügbarkeit gesendet, solange das Programm läuft. Die Oberfläche im Browser lässt sich über die IP-Adresse gefolgt von `:8080` öffnen.
 
 
 ## OPTIONAL - Den Tracker über einen Raspberry Pi laufen lassen
