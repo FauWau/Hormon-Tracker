@@ -16,6 +16,7 @@ export const waitTime = 1800000 //1800000 ms = 30 min
 export const port = 8080
 
 // Mail Einstellungen
+// Bei Fragen beim Ausfüllen kann nach Nodemailer gefolgt vom Maildienst gegoogelt werden
 export const mail_settings = {
 	service: "",
 	auth: {
