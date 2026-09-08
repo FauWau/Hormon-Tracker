@@ -24,7 +24,10 @@ Für alle gängigen Betriebssysteme findet sich auf der Seite `https://nodejs.or
 Zuerst muss man die Konsole zu öffnen. Dafür öffnet man unter den gängigen Betriebssystemen die Suchleiste und sucht nach der Anwendung `Terminal`. In der Konsole wechselt man in den Ordner mit den Projektdatein mit dem Befehl `cd Pfad/zum/Ordner` und anschließendem Bestätigen mit der Enter-Taste. Anschließend gibt man in die Konsole `npm install` ein. 
 
 4. Hintergrundnutzung ermöglichen <br>
-Um die Nutzung im Hintergrund zu ermöglichen verwendet dieses Projekt TMux. Die Installationsanleitung befindet sich auf `https://tmux.app/#install-heading`.  Um TMux zu starten gibt
+Um die Nutzung im Hintergrund zu ermöglichen verwendet dieses Projekt TMux. Die Installationsanleitung befindet sich auf `https://tmux.app/#install-heading`.  Um TMux zu starten gibt man nur `tmux` eingeben und bestätigen.
+
+5. Daten eintragen<br>
+In den Datein der Anwendung befindet sich eine Konfigurationsdatei (`hormon_tracker_config.js`). In dieser müssen die leeren Felder entsprechend der dortigen Beschreibung ausgefüllt werden.
 
 
 ## Programm starten
