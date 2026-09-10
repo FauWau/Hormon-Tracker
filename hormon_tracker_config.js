@@ -66,5 +66,15 @@ export const sites = {
 		name: "Estradiol Enanthat mit Trauben&shy;samen",
 		provider: "Felicitas",
 		link: "https://flcts.eu/products/estinj/estradiol-enanthate-grape-10ml/"
+	},
+	7: {
+		name: "Estradiol Enanthat MCT 10ml",
+		provider: "Proleta",
+		link: "https://proletahrt.com/Shop/Product?slug=estradiol-enanthate-40mgml-mct"
+	},
+	8: {
+		name: "Estradiol Enanthat MCT 5ml",
+		provider: "Proleta",
+		link: "https://proletahrt.com/Shop/Product?slug=estradiol-enanthate-5ml-40mgml-mct"
 	}
 }
