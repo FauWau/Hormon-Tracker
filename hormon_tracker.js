@@ -14,9 +14,10 @@ import * as config from "./hormon_tracker_config.js"
  * - AstroVials
  * - Felicitas
  * - Serapharma
+ * - Proleta
  *
  * @author FauWau
- * @version 1.0 
+ * @version 1.1 
  * Letztes Update: 07.09.2026
 */
 
@@ -60,10 +61,14 @@ function filterDom (document, provider) {
 		case "Serapharma":
 		case "AstroVials":
 		case "Felicitas":
-			var stock = document.querySelector(".stock")
+			return document.querySelector(".stock")
 			break
+		case "Proleta":
+			return document.querySelector(".text-danger")
+			break
+		default:
+			return undefined
 	}
-	return stock
 }
 
 /**
@@ -78,6 +83,7 @@ function inStock (span, provider) {
 		case "Serapharma":
 		case "AstroVials":
 		case "Felicitas":
+		case "Proleta":
 		    	if(span.textContent.toLowerCase() != "out of stock") {
 				return span.textContent.match("\d")[0]
 			}
