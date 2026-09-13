@@ -17,8 +17,8 @@ import * as config from "./hormon_tracker_config.js"
  * - Proleta
  *
  * @author FauWau
- * @version 1.1 
- * Letztes Update: 07.09.2026
+ * @version 1.1.1
+ * Letztes Update: 13.09.2026
 */
 
 
@@ -26,10 +26,13 @@ import * as config from "./hormon_tracker_config.js"
 // Email-Modul initialisieren
 var transporter = nodemailer.createTransport(config.mail_settings)
 
+// GUI laden
 const file = fs.readFileSync("./hormon_tracker.html", (err, html) => {
-        if(err) console.log(err)
+        if(err) {
+			console.log(err)
+			throw "\x1b[92mHTML-Datei nicht gefunden"	
+		}
 })
-
 let html = parse(file.toString())
 let availableBefore = []
 const len = Object.keys(config.sites).length
@@ -43,9 +46,13 @@ const len = Object.keys(config.sites).length
   * @return: Zielseite als DOM Objekt | undefined falls Seite nicht gefunden
 */
 async function getDom(link) {
-	var response = await fetch(link)
-	var foreignHtml = await response.text()
-	return parse(foreignHtml)
+	try {
+		var response = await fetch(link)
+		var foreignHtml = await response.text()
+		return parse(foreignHtml)
+	} catch (err) {
+		return undefined
+	} 
 }
 
 
@@ -122,7 +129,7 @@ function notifyStock (stock, site, i, availableBefore) {
 			html = html.replace("button" + i + " = 0", "button" + i + " = " + stock)
 			availableBefore[i-1] = true
 		} else {
-			console.log(site["name"].replace("&shy;", "") + " (" + site["provider"] + ") ist nicht vorhanden")
+			console.log(site["name"].replace("&shy;", "") + " (" + site["provider"] + ") ist nicht auf Lager")
     		// Update die GUI um Fehlen anzuzeigen
 			html = html.replace("button" + i + " = \d", "button" + i + " = 0")
 			availableBefore[i-1] = false
