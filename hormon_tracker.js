@@ -17,7 +17,7 @@ import * as config from "./hormon_tracker_config.js"
  * - Proleta
  *
  * @author FauWau
- * @version 1.1.1
+ * @version 1.1.2
  * Letztes Update: 13.09.2026
 */
 
@@ -29,7 +29,6 @@ var transporter = nodemailer.createTransport(config.mail_settings)
 // GUI laden
 const file = fs.readFileSync("./hormon_tracker.html", (err, html) => {
         if(err) {
-			console.log(err)
 			throw "\x1b[92mHTML-Datei nicht gefunden"	
 		}
 })
@@ -129,7 +128,7 @@ function notifyStock (stock, site, i, availableBefore) {
 			html = html.replace("button" + i + " = 0", "button" + i + " = " + stock)
 			availableBefore[i-1] = true
 		} else {
-			console.log(site["name"].replace("&shy;", "") + " (" + site["provider"] + ") ist nicht auf Lager")
+			console.log("\x1b[37m" + site["name"].replace("&shy;", "") + " (" + site["provider"] + ") ist nicht auf Lager")
     		// Update die GUI um Fehlen anzuzeigen
 			html = html.replace("button" + i + " = \d", "button" + i + " = 0")
 			availableBefore[i-1] = false
@@ -222,5 +221,5 @@ try {
 } catch (err) {
 	console.log(err)
 } finally {
-	console.log("Beende Tracker")
+	console.log("\x1b[37mBeende Tracker")
 }
