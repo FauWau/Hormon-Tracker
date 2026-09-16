@@ -17,8 +17,8 @@ import * as config from "./hormon_tracker_config.js"
  * - Proleta
  *
  * @author FauWau
- * @version 1.1.2
- * Letztes Update: 13.09.2026
+ * @version 1.1.3
+ * Letztes Update: 16.09.2026
 */
 
 
@@ -68,10 +68,8 @@ function filterDom (document, provider) {
 		case "AstroVials":
 		case "Felicitas":
 			return document.querySelector(".stock")
-			break
 		case "Proleta":
 			return document.querySelector(".text-danger")
-			break
 		default:
 			return undefined
 	}
@@ -90,10 +88,10 @@ function inStock (span, provider) {
 		case "AstroVials":
 		case "Felicitas":
 		case "Proleta":
-		    	if(span.textContent.toLowerCase() != "out of stock") {
-				return span.textContent.match("\d")[0]
-			}
-			break
+				var matches = span.textContent.match("\d")
+		    	if(span.textContent.toLowerCase() != "out of stock" && matches != null) {
+					return matches[0]
+				}
 	}
 	return 0
 }
