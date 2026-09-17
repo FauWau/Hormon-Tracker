@@ -47,10 +47,11 @@ const len = Object.keys(config.sites).length
 async function getDom(link) {
 	try {
 		var response = await fetch(link)
+		if(response.status != 200) throw "Keine Antwort"
 		var foreignHtml = await response.text()
 		return parse(foreignHtml)
 	} catch (err) {
-		return undefined
+		return parse("")
 	} 
 }
 
@@ -187,7 +188,7 @@ try {
 		for(let i = 1; i <= len; i++) {
 			// Prüfe ob Seite erreichbar ist
 			getDom(config.sites[i]["link"]).then( foreignHtml => {
-				if(foreignHtml == undefined) {
+				if(foreignHtml.childNodes.length == 0) {
 					console.log("\x1b[91m" + config.sites[i]["provider"] + " ist nicht erreichbar")
 				} else {
 					// Suche nach der Aussage zum Vorrat
